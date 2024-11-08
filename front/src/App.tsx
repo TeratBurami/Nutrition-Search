@@ -8,17 +8,22 @@ export default function App(this: any) {
   const Searching = async () => {
     SetsearchData([])
     console.log(search)
-    fetch("http://localhost:3000/search", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ search: {search} }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        SetsearchData(data.data)
-      });
+    if(search){
+      fetch("http://localhost:3000/search", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ search: {search} }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          SetsearchData(data.data)
+        });
+    }
+    else{
+      SetsearchData([])
+    }
   };
 
   return (
@@ -31,7 +36,7 @@ export default function App(this: any) {
           type="text"
           placeholder="Search for a food nutrition"
           onChange={(e) => SetSearch(e.target.value)}
-        />
+          onKeyDown={(e) => e.key === 'Enter' && Searching()}        />
         <button onClick={Searching}>Search</button>
         <div className="result-container">
           <h3>Result ({search_data.length})</h3>

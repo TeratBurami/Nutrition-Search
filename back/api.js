@@ -13,9 +13,9 @@ app.post("/search", (req, res, next) => {
   let search = req.body.search.search;
   let string=[]
   for(let i=0;i<10;i++){
-    string[i]=`${search}${i}`;
+    string[i]=`${search} ${i}`;
   }
-  console.log(search);
+
   res.json({
     data: string,
   });
