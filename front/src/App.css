@@ -1,0 +1,76 @@
+*{
+  margin:0;
+}
+
+h1{
+  color:orangered;
+  margin-top:5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h3{
+  color:orange;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.text-center{
+  text-align: center;
+}
+
+.container{
+  width: 50%;
+  margin:5rem auto;
+}
+
+#search{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px orangered solid;
+  color: orangered;
+}
+
+#search:focus{
+  outline: none;
+}
+
+button{
+  padding: 0.6rem 2rem;
+  border-radius: 10px;
+  border: none;
+  color:white;
+  font-size: large;
+  background-color: orangered;
+  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+button:hover{
+  background-color: rgb(201, 54, 0);
+  cursor: pointer;
+}
+
+.search-result{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 1rem 0;
+}
+
+.result-container{
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  margin: 2rem auto;
+  background: white;
+  padding: 1rem;
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: orangered;
+  margin:1rem 0;
+}
+
+.test{
+  background-color: black;
+}
